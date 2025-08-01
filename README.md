@@ -1,7 +1,7 @@
-# Contador Regressivo para o Natal 🎄⏳#
+# Contador Regressivo para o Natal 🎄⏳
 Um site interativo de contagem regressiva para o Natal com design responsivo e efeitos especiais.
 
-##Funcionalidades ✨##
+## Funcionalidades ✨
 ⏱️ Contador em tempo real (dias, horas, minutos e segundos)
 
 ❄️ Efeito de neve animado
@@ -14,7 +14,7 @@ Um site interativo de contagem regressiva para o Natal com design responsivo e e
 
 🌟 Animação da árvore de Natal flutuante
 
-##Tecnologias Utilizadas 💻
+## Tecnologias Utilizadas 💻
 HTML5
 
 CSS3 (com animações e gradientes)
