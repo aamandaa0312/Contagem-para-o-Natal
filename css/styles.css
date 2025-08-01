@@ -1,0 +1,185 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&family=Poppins:wght@400;600;700&display=swap');
+
+/*=============== VARIABLES ===============*/
+:root {
+    --primary-color: #2e7d32;
+    --secondary-color: #fbc02d;
+    --dark-green: #1b5e20;
+    --light-yellow: #fff9c4;
+    --white: #ffffff;
+    --black: #333333;
+}
+
+/*=============== BASE ===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-green));
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/*=============== COUNTDOWN CONTAINER ===============*/
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.countdown-col {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+}
+
+/*=============== TYPOGRAPHY ===============*/
+h1 {
+    font-family: 'Gwendolyn', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.message {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/*=============== COUNTDOWN ===============*/
+.countdown {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.countdown-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 100px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.countdown-item:hover {
+    transform: translateY(-5px);
+}
+
+.countdown-item span:first-child {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--light-yellow);
+    margin-bottom: 5px;
+}
+
+.countdown-item span:last-child {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--white);
+}
+
+/*=============== BUTTON ===============*/
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--black);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn:hover {
+    background-color: var(--light-yellow);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn i {
+    font-size: 1.2rem;
+}
+
+/*=============== IMAGE ===============*/
+.christmas-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    animation: float 6s ease-in-out infinite;
+}
+
+/*=============== ANIMATIONS ===============*/
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/*=============== RESPONSIVE ===============*/
+@media (max-width: 768px) {
+    .countdown-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .countdown {
+        justify-content: center;
+    }
+    
+    .message {
+        margin: 2rem auto;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .countdown-item {
+        min-width: 80px;
+        padding: 15px;
+    }
+    
+    .countdown-item span:first-child {
+        font-size: 2rem;
+    }
+}
